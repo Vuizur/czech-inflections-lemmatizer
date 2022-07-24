@@ -16,6 +16,6 @@ Then you can use everything like this:
 ### Usage
 ```
 lemm = Lemmatizer("lemma_inflection.db")
-print(lemm.find_inflections("červenat"))
-print(lemm.find_lemma("lesa"))
+print(lemm.find_inflections("červenat")) #['nečervenána', 'červenány', 'nečervenány', 'červenán', ...]
+print(lemm.find_lemma("lesa")) #[les]
 ```
