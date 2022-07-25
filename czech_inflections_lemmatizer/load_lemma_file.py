@@ -21,11 +21,8 @@ def create_indices(db_path):
     conn.close()
 
 def fix_lemma(word):
-    """Remove everything in the string after (and including) the first _"""
-    if word.find('_') != -1:
-        return word[:word.find('_')]
-    else:
-        return word
+    """Remove everything in the string after (and including) the first _ or -"""
+    return word.split("_")[0].split("-")[0]
 
 def load_lemma_file(lemma_file_path, database_path):
     """Loads the lemma TSV """
@@ -73,6 +70,5 @@ def create_and_fill_database(lemma_file_path, database_path):
 if __name__ == "__main__":
     lemma_tsv_path = "D:/programming_resources/czech-morfflex-2.0.tsv"
     db_path = 'lemma_inflection.db'
-
-    print("Test")
-    #create_and_fill_database(lemma_tsv_path, db_path)
+    #print(fix_lemma("večer-1"))
+    create_and_fill_database(lemma_tsv_path, db_path)

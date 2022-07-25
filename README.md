@@ -5,7 +5,7 @@ This project uses the data from https://ufal.mff.cuni.cz/morfflex to generate a 
 * Find the lemma of a word
 * Find all inflections of a word
 
-Warning: The created database is more than 10 GB large.
+Warning: The created database is more than 10 GB large. There is currently no support of lemmatization based on part-of-speech, but pull requests are welcome.
 
 ### Install
 
